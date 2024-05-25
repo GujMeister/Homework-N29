@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct SwiftUI_EssentialsApp: App {
+struct SwiftUIEssentialsApp: App {
+    @StateObject private var taskData = TaskData()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(taskData)
         }
     }
 }
